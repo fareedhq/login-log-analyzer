@@ -1,37 +1,40 @@
 login_status = [
     "success",
+    "success",
+    "success",
+    "success",
+    "failed",
+    "failed",
+    "failed",
+    "failed",
     "failed",
     "failed",
     "failed",
     "success",
-    "success",
-    "failed",
     "success",
     "success",
     "failed",
     "unknown",
-    "xss",
-    "unkown2",
-    "unknown3",
-    "unknown"
+    "unknown",
+    "failed",
 ]
 
+
 success_count = 0
-failed_count = 0
+failed_count = 0 
 unrecognized_count = 0
 
 
 for status in login_status:
-    if status == "success":
+    if status == "success": 
         success_count = success_count + 1
     elif status == "failed":
         failed_count = failed_count + 1
     elif status != "success" and status != "failed":
         unrecognized_count = unrecognized_count + 1
 
-print("Number of successful logins:", success_count)
-print("Number of failed logins:", failed_count)
-print("Number of unrecognized:", unrecognized_count)
+print("login success:",success_count)
+print("login failed:",failed_count)
+print("unrecognized:",unrecognized_count)
 
-total_counted = success_count + failed_count + unrecognized_count
-print("total counted:", total_counted, "| total data:", len(login_status))
+print("Data total:", success_count + failed_count + unrecognized_count)
